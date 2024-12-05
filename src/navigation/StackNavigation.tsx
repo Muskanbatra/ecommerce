@@ -4,7 +4,7 @@ import Profile from '../screens/auth/Profile';
 import Register from '../screens/auth/Register';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/home/Home';
-import BottomTab from './BottomNavigation';
+import Fashion from '../screens/fashion/Fashion';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +18,8 @@ function StackNavigation() {
                 <Stack.Screen name="register" component={Register} />
                 <Stack.Screen name="profile" component={Profile} />
             </Stack.Group>
-            <Stack.Screen name="home" component={BottomTab} />
+            <Stack.Screen name="home" component={HomeScreen} />
+            <Stack.Screen name="fashion" component={Fashion} />
         </Stack.Navigator>
     );
 }

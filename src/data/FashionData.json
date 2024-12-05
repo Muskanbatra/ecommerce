@@ -1,0 +1,77 @@
+[
+    {
+      "id": "1",
+      "title": "Trousers",
+      "price": "From ₹179",
+      "image": "https://offduty.in/cdn/shop/files/C7409AB0-73EE-4640-AA0D-3FD5466EDC81_1080x.jpg?v=1725259558"
+    },
+    {
+      "id": "2",
+      "title": "Sweatshirts",
+      "price": "From ₹149",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1p4b1-JPKBOiVIu7HjHEzVsJvS5f_j5S8GQ&s"
+    },
+    {
+      "id": "3",
+      "title": "Sweater",
+      "price": "₹From 179",
+      "image": "https://www.alamodelabel.in/cdn/shop/products/image_40213fc6-4d30-41a7-be04-aca2ba5d8a58_600x600_crop_center.jpg?v=1717493963"
+    },
+    {
+      "id": "4",
+      "title": "Jackets",
+      "price": "From ₹149",
+      "image": "https://devotedstore.com/cdn/shop/files/21.png?v=1711236966"
+    },
+
+    {
+      "id": "5",
+      "title": "Dresses",
+      "price": "From ₹249",
+      "image": "https://www.ordinaree.com/cdn/shop/files/Ordinaree-5_d2f9c1f0-5f01-4a12-ad2e-8a39f76bd662.jpg?v=1718174352"
+    },
+    {
+        "id": "6",
+        "title": "Blazer & Coats",
+        "price": "From ₹199",
+        "image": "https://mrbutton.in/cdn/shop/files/1_bd62f431-c1bb-40b9-8560-8d9dda8ca13f.jpg?v=1698478830&width=1080"
+      },
+    {
+      "id": "7",
+      "title": "Suits",
+      "price": "From ₹499",
+      "image": "https://5.imimg.com/data5/ANDROID/Default/2022/8/UQ/LA/KT/156666481/product-jpeg.jpg"
+    },
+    {
+        "id": "8",
+        "title": "Kids Suits",
+        "price": "From ₹299",
+        "image": "https://image.made-in-china.com/318f0j00mafRGQbMOVov/%E8%A7%86%E9%A2%91-default.jobtemplate.mp4.480.mp4.webp"
+      },
+    {
+      "id": "9",
+      "title": "Frocks ",
+      "price": "From ₹299",
+      "image": "https://lagorii.com/cdn/shop/files/purple-ruffled-net-tailback-frock-with-floral-and-butterfly-embellishment-for-girls-lagorii-kids-1.jpg?v=1710335673"
+    },
+
+    {
+      "id": "10",
+      "title": "Shirts",
+      "price": "From ₹399",
+      "image": "https://thefoomer.in/cdn/shop/files/final_8e233dea-27be-4183-bca0-441406529afa.jpg?v=1716523836"
+    },
+    {
+      "id": "11",
+      "title": "Jeans",
+      "price": "From ₹299",
+      "image": "https://wholetex.sgp1.cdn.digitaloceanspaces.com/full/denim-womans-cargo-fale-poket-jeans-1160.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Kurtis",
+      "price": "From ₹199",
+      "image": "https://www.ethnicplus.in/media/catalog/product/cache/32be15c02fc0538dd5b7c85e946b51b1/5/0/5052_1_.jpg"
+    }
+  ]
+  
