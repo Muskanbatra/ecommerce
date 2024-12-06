@@ -15,7 +15,9 @@ import fashionData from '../../data/FashionData.json';
 
 const Fashion = () => {
   const renderItem = ({item}: any) => (
-    <TouchableOpacity style={styles.itemContainer}>
+    <TouchableOpacity
+      style={styles.itemContainer}
+      onPress={() => item.title === 'Dresses' && navigate('shop_fashion')}>
       <View style={styles.circle}>
         <Image source={{uri: item.image}} style={styles.image} />
       </View>
@@ -26,21 +28,15 @@ const Fashion = () => {
 
   return (
     <>
+      {/* Header */}
       <View style={styles.header}>
-        <View style={{flexDirection: 'row', gap: 20}}>
-          <TouchableOpacity>
-            <FontAwesome6
-              name="arrow-left"
-              size={28}
-              color="white"
-              onPress={() => {
-                navigate('home');
-              }}
-            />
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <TouchableOpacity onPress={() => navigate('home')}>
+            <FontAwesome6 name="arrow-left" size={28} color="white" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Fashion</Text>
         </View>
-        <View style={styles.headerIcons}>
+        <View style={{flexDirection: 'row'}}>
           <FontAwesome
             name="bell-o"
             size={24}
@@ -56,6 +52,7 @@ const Fashion = () => {
         </View>
       </View>
 
+      {/* Content */}
       <View style={styles.container}>
         <Image
           source={{
@@ -66,7 +63,7 @@ const Fashion = () => {
         <FlatList
           data={fashionData}
           numColumns={3}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.id.toString()}
           renderItem={renderItem}
           columnWrapperStyle={{justifyContent: 'space-between'}}
         />
@@ -76,19 +73,6 @@ const Fashion = () => {
 };
 
 const styles = StyleSheet.create({
-  itemContainer: {
-    flex: 1,
-    alignItems: 'center',
-    marginHorizontal: 10,
-    marginBottom: 20,
-  },
-  banner: {
-    width: '100%',
-    height: 150,
-    resizeMode: 'cover',
-    marginBottom: 10,
-    borderRadius: 10,
-  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -100,9 +84,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
-  },
-  headerIcons: {
-    flexDirection: 'row',
+    marginLeft: 10,
   },
   icon: {
     marginLeft: 15,
@@ -112,14 +94,27 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 10,
   },
+  banner: {
+    width: '100%',
+    height: 150,
+    resizeMode: 'cover',
+    marginBottom: 10,
+    borderRadius: 10,
+  },
+  itemContainer: {
+    flex: 1,
+    alignItems: 'center',
+    marginHorizontal: 10,
+    marginBottom: 20,
+  },
   circle: {
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: 'pink',
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 8,
+    backgroundColor: 'pink',
   },
   image: {
     width: 92,
@@ -129,14 +124,12 @@ const styles = StyleSheet.create({
   price: {
     color: '#ffffff',
     fontWeight: 'bold',
-    marginBottom: 4,
     backgroundColor: '#90D6AA',
     paddingHorizontal: 9,
     paddingVertical: 5,
-    width: 95,
-    marginTop: -20,
     borderRadius: 5,
     textAlign: 'center',
+    marginTop: -20,
   },
   title: {
     fontSize: 14,

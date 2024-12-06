@@ -5,6 +5,7 @@ import Register from '../screens/auth/Register';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/home/Home';
 import Fashion from '../screens/fashion/Fashion';
+import FashionShop from '../screens/fashion/FashionShop';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,8 @@ function StackNavigation() {
             </Stack.Group>
             <Stack.Screen name="home" component={HomeScreen} />
             <Stack.Screen name="fashion" component={Fashion} />
+            <Stack.Screen name="shop_fashion" component={FashionShop} />
+
         </Stack.Navigator>
     );
 }
