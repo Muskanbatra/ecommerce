@@ -56,7 +56,7 @@ const FashionShop = () => {
               }}
             />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Fashion</Text>
+          <Text style={styles.headerTitle}>Dresses</Text>
         </View>
         <View style={styles.headerIcons}>
           <FontAwesome name="bell-o" size={24} color="white" />
