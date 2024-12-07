@@ -1,0 +1,84 @@
+[
+    {
+      "id": 1,
+      "name": "Halter Neck Dress",
+      "price": "$999.99",
+      "oldPrice": "$1,322.99",
+      "image": "https://media-uk.landmarkshops.in/cdn-cgi/image/h=831,w=615,q=85,fit=cover/max-new/1000012408260-Blue-BLUE-1000012408260_01-2100.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Ruffle Dress",
+      "price": "$711.99",
+      "oldPrice": "$1,022.99",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWjcwp7pRB6cnJ8QGvIyj0EPuuc_yAIzqg2A&s",
+      "rating": 4.0
+    },
+    {
+      "id": 3,
+      "name": "Evening Gown",
+      "price": "$1,200.99",
+      "oldPrice": "$1,500.99",
+      "image": "https://dressrent.in/cdn/shop/products/Wine3-Copy_1024x1024@2x.jpg?v=1606113633",
+      "rating": 5.0
+    },
+    {
+      "id": 4,
+      "name": "Casual Summer Dress",
+      "price": "$399.99",
+      "oldPrice": "$500.99",
+      "image": "https://s.alicdn.com/@sc04/kf/H6d60481cb0f54d8bbaeabe5c33a1f82d4.jpg_720x720q50.jpg",
+      "rating": 3.8
+    },
+    {
+      "id": 5,
+      "name": "Party Wear Dress",
+      "price": "$799.99",
+      "oldPrice": "$999.99",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWYvh-kW7kkmNnj6notCFr4tNVju_P3V-nKA&s",
+      "rating": 4.2
+    },
+    {
+      "id": 6,
+      "name": "Vintage Floral Dress",
+      "price": "$659.99",
+      "oldPrice": "$899.99",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBuJGXd2KTUKx9efLl2lAY42zriCqYz5xPqg&s",
+      "rating": 4.7
+    },
+    {
+      "id": 7,
+      "name": "Formal Office Dress",
+      "price": "$749.99",
+      "oldPrice": "$949.99",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu_ivMHMSy3zODO3s9yPOTudH4S2rgWAKbvB89_tmd03n6daOLujeRbf3yDScJrSwqlDM&usqp=CAU",
+      "rating": 4.3
+    },
+    {
+      "id": 8,
+      "name": "Cocktail Dress",
+      "price": "$1,099.99",
+      "oldPrice": "$1,399.99",
+      "image": "https://www.newyorkdress.com/cdn/shop/products/CD0187_rosegold_1_18fcbc1a-b22a-4b9f-a25f-eaf05f184d98-660593_600x.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": 9,
+      "name": "Maxi Dress",
+      "price": "$899.99",
+      "oldPrice": "$1,099.99",
+      "image": "https://www.vastranand.in/cdn/shop/files/1_bc4cce67-0c92-4034-b34b-644c1cd9ea66.jpg?v=1723196650",
+      "rating": 4.6
+    },
+    {
+      "id": 10,
+      "name": "Bohemian Dress",
+      "price": "$569.99",
+      "oldPrice": "$749.99",
+      "image": "https://i.etsystatic.com/7991287/r/il/56e23a/5326380803/il_570xN.5326380803_e23w.jpg",
+      "rating": 4.0
+    }
+   
+  ]
+  
