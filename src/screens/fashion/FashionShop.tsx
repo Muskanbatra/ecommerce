@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 190,
     borderRadius: 8,
-    objectFit:'cover'
+    objectFit: 'cover',
   },
   productDetails: {
     padding: 10,

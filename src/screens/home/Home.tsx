@@ -132,7 +132,7 @@ const HomeScreen = () => {
         <SearchInput />
       </View>
 
-      {/* Banners */}
+  
 
       {/* Categories */}
       <View style={styles.categoriesContainer}>
@@ -145,7 +145,7 @@ const HomeScreen = () => {
               onPress={() => {
                 setSelectedCategory(item.name);
                 if (item.name === 'Fashion') {
-                  navigate('fashion');
+                  navigate('sign_in');
                 }
               }}>
               <Ionicons
