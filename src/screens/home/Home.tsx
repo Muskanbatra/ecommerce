@@ -117,7 +117,6 @@ const HomeScreen = () => {
         </View>
       </View>
 
-      {/* <ScrollView> */}
       {/* Address */}
       <View style={styles.addressContainer}>
         <Ionicons name="location-outline" size={20} color="white" />
@@ -125,7 +124,6 @@ const HomeScreen = () => {
           St 394 Jackson, New york, United States
         </Text>
       </View>
-      {/* </ScrollView> */}
 
       {/* Search Bar */}
       <View style={styles.searchContainer}>
