@@ -1,12 +1,24 @@
-import React, { useRef, useState } from 'react';
+import React, {useRef, useState} from 'react';
 import CustomButton from '../../component/CustomButton';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { goBack, navigate } from '../../navigation/TopLevelNavigation';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
+import {goBack, navigate} from '../../navigation/TopLevelNavigation';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  StatusBar,
+} from 'react-native';
 
 const OTP: React.FC = () => {
   const [otp, setOtp] = useState<string[]>(['', '', '', '']);
-  const inputRefs = [useRef<TextInput>(null), useRef<TextInput>(null), useRef<TextInput>(null), useRef<TextInput>(null)];
+  const inputRefs = [
+    useRef<TextInput>(null),
+    useRef<TextInput>(null),
+    useRef<TextInput>(null),
+    useRef<TextInput>(null),
+  ];
 
   const handleInputChange = (value: string, index: number) => {
     const newOtp = [...otp];
@@ -25,15 +37,12 @@ const OTP: React.FC = () => {
 
   const handleOTP = () => {
     console.log('Entered OTP:', otp.join(''));
-    navigate('profile')
+    navigate('profile');
   };
 
   return (
     <>
-      <StatusBar
-        barStyle={'dark-content'}
-        backgroundColor={"white"}
-      />
+      <StatusBar barStyle={'dark-content'} backgroundColor={'white'} />
       <View style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => goBack()}>
@@ -42,14 +51,16 @@ const OTP: React.FC = () => {
         </View>
 
         <Text style={styles.title}>OTP Verification</Text>
-        <Text style={styles.instruction}>Please enter the OTP sent to your phone number.</Text>
+        <Text style={styles.instruction}>
+          Please enter the OTP sent to your phone number.
+        </Text>
 
         <View style={styles.otpContainer}>
           {otp.map((digit, index) => (
             <TextInput
               key={index}
               value={digit}
-              onChangeText={(value) => handleInputChange(value, index)}
+              onChangeText={value => handleInputChange(value, index)}
               keyboardType="numeric"
               maxLength={1}
               style={styles.input}
