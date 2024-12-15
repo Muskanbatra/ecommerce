@@ -117,7 +117,6 @@ const HomeScreen = () => {
         </View>
       </View>
 
-      {/* <ScrollView> */}
       {/* Address */}
       <View style={styles.addressContainer}>
         <Ionicons name="location-outline" size={20} color="white" />
@@ -125,14 +124,13 @@ const HomeScreen = () => {
           St 394 Jackson, New york, United States
         </Text>
       </View>
-      {/* </ScrollView> */}
 
       {/* Search Bar */}
       <View style={styles.searchContainer}>
         <SearchInput />
       </View>
 
-      {/* Banners */}
+  
 
       {/* Categories */}
       <View style={styles.categoriesContainer}>
@@ -145,7 +143,7 @@ const HomeScreen = () => {
               onPress={() => {
                 setSelectedCategory(item.name);
                 if (item.name === 'Fashion') {
-                  navigate('fashion');
+                  navigate('sign_in');
                 }
               }}>
               <Ionicons
