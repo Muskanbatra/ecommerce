@@ -34,7 +34,7 @@ const FashionShop = () => {
               : 'star-o'
           }
           size={14}
-          color="#FFD700" // Gold color
+          color="#FFD700" 
           style={{marginRight: 2}}
         />,
       );
@@ -46,7 +46,6 @@ const FashionShop = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={'light-content'} backgroundColor={'#90D6AA'} />
 
-      {/* Header */}
       <View style={styles.header}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <TouchableOpacity>

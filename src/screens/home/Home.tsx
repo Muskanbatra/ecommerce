@@ -125,7 +125,6 @@ const HomeScreen = () => {
           St 394 Jackson, New york, United States
         </Text>
       </View>
-      {/* </ScrollView> */}
 
       {/* Search Bar */}
       <View style={styles.searchContainer}>
