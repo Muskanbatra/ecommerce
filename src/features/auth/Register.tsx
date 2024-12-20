@@ -57,8 +57,22 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
         maxLength={10}
         onChangeText={onChangeText}
       />
+     <Input
+        ref={inputRef}
+        inputContainerStyle={styles.inputContainer}
+        placeholder="Enter Password"
+        inputStyle={{...Fonts.black16RobotoRegular, color: 'black'}}
+        errorMessage={errorMessage}
+        errorStyle={{textAlign: 'center'}}
+        maxLength={10}
+        onChangeText={onChangeText}
+      />
 
-      <TouchableOpacity onPress={handleLogin} style={styles.loginButton}>
+      <TouchableOpacity
+        onPress={() => {
+          navigate('sign_in');
+        }}
+        style={styles.loginButton}>
         <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
 
@@ -148,7 +162,7 @@ const styles = StyleSheet.create({
   header: {
     marginBottom: 20,
     marginLeft: 10,
-    paddingTop: Sizes.fixPadding * 12,
+    paddingTop: Sizes.fixPadding * 4,
     paddingBottom: Sizes.fixPadding * 5,
   },
   title: {

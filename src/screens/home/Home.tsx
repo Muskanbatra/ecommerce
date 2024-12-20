@@ -117,6 +117,7 @@ const HomeScreen = () => {
         </View>
       </View>
 
+      {/* <ScrollView> 
       {/* Address */}
       <View style={styles.addressContainer}>
         <Ionicons name="location-outline" size={20} color="white" />
@@ -129,44 +130,39 @@ const HomeScreen = () => {
       <View style={styles.searchContainer}>
         <SearchInput />
       </View>
-
-  
-
-      {/* Categories */}
-      <View style={styles.categoriesContainer}>
-        <FlatList
-          horizontal
-          data={categories}
-          renderItem={({item}: any) => (
-            <TouchableOpacity
-              style={[styles.category]}
-              onPress={() => {
-                setSelectedCategory(item.name);
-                if (item.name === 'Fashion') {
-                  navigate('sign_in');
-                }
-              }}>
-              <Ionicons
-                name={item.icon}
-                size={28}
-                color={selectedCategory === item.name ? '#ffbd00' : '#90D6AA'}
-              />
-              <Text
-                style={{
-                  fontSize: 12,
-                  color: selectedCategory === item.name ? '#ffbd00' : '#90D6AA',
-                  marginTop: 5,
-                }}>
-                {item.name}
-              </Text>
-            </TouchableOpacity>
-          )}
-          keyExtractor={item => item.name}
-          showsHorizontalScrollIndicator={false}
-        />
-      </View>
-
       <ScrollView>
+        {/* Categories */}
+        <View style={styles.categoriesContainer}>
+          <FlatList
+            horizontal
+            data={categories}
+            renderItem={({item}: any) => (
+              <TouchableOpacity
+                style={[styles.category]}
+                onPress={() => {
+                  navigate('fashion');
+                }}>
+                <Ionicons
+                  name={item.icon}
+                  size={28}
+                  color={selectedCategory === item.name ? '#ffbd00' : '#90D6AA'}
+                />
+                <Text
+                  style={{
+                    fontSize: 12,
+                    color:
+                      selectedCategory === item.name ? '#ffbd00' : '#90D6AA',
+                    marginTop: 5,
+                  }}>
+                  {item.name}
+                </Text>
+              </TouchableOpacity>
+            )}
+            keyExtractor={item => item.name}
+            showsHorizontalScrollIndicator={false}
+          />
+        </View>
+
         <Image
           source={{
             uri: 'https://static.vecteezy.com/system/resources/thumbnails/004/707/493/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-vector.jpg',

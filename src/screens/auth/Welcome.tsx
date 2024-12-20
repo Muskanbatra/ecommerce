@@ -1,10 +1,21 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  StatusBar,
+  Dimensions,
+} from 'react-native';
+import { navigate } from '../../navigation/TopLevelNavigation';
+
+const { width, height } = Dimensions.get('window');
 
 const Welcome = () => {
   return (
     <View style={styles.container}>
-      {/* Logo */}
+      <StatusBar barStyle={'dark-content'} backgroundColor={'white'} />
       <View style={styles.logoContainer}>
         <Image
           source={{
@@ -13,8 +24,6 @@ const Welcome = () => {
           style={styles.logo}
         />
       </View>
-
-      {/* Welcome Section */}
       <View style={styles.welcomeContainer}>
         <Text style={styles.welcomeTitle}>Welcome</Text>
         <Text style={styles.welcomeDescription}>
@@ -22,18 +31,29 @@ const Welcome = () => {
           deals, exclusive offers, and a wide variety of products just a click
           away.
         </Text>
-
-        {/* Buttons */}
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.signInButton}>
+          <TouchableOpacity
+            style={styles.signInButton}
+            onPress={() => {
+              navigate('sign_in');
+            }}>
             <Text style={styles.buttonText}>Sign In</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.signUpButton}>
+          <TouchableOpacity
+            style={styles.signUpButton}
+            onPress={() => {
+              navigate('register');
+            }}>
             <Text style={[styles.buttonText, styles.signUpText]}>Sign Up</Text>
           </TouchableOpacity>
         </View>
-
-        <Text style={styles.withoutLogin}>Continue without login</Text>
+        <Text
+          style={styles.withoutLogin}
+          onPress={() => {
+            navigate('home');
+          }}>
+          Continue without login
+        </Text>
       </View>
     </View>
   );
@@ -48,40 +68,42 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: height * 0.1,
   },
   logo: {
-    width: 280,
-    height: 160,
+    width: width * 0.7,
+    height: height * 0.2,
   },
   welcomeContainer: {
     flex: 1,
     backgroundColor: '#90D6AA',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    padding: 25,
+    paddingHorizontal: width * 0.06,
+    paddingTop: height * 0.05,
+    paddingBottom: height * 0.1,
   },
   welcomeTitle: {
-    fontSize: 34,
+    fontSize: width * 0.09,
     fontWeight: '600',
     color: '#000',
     marginBottom: 10,
-    marginTop: 40,
   },
   welcomeDescription: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     fontWeight: 'bold',
-    lineHeight: 22,
-    marginBottom: 20,
+    lineHeight: width * 0.05,
+    marginBottom: height * 0.05,
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 20,
+    marginTop: height * 0.05,
   },
   signInButton: {
     flex: 1,
     backgroundColor: '#000',
-    padding: 15,
+    paddingVertical: height * 0.02,
     borderRadius: 30,
     marginRight: 10,
     alignItems: 'center',
@@ -90,14 +112,14 @@ const styles = StyleSheet.create({
   signUpButton: {
     flex: 1,
     backgroundColor: '#fff',
-    padding: 15,
+    paddingVertical: height * 0.02,
     borderRadius: 30,
     marginLeft: 10,
     alignItems: 'center',
     elevation: 3,
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
     color: '#ffffff',
   },
@@ -105,10 +127,10 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   withoutLogin: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     color: '#333',
     textAlign: 'center',
-    marginTop: 40,
+    marginTop: height * 0.05,
     textDecorationLine: 'underline',
     fontWeight: 'bold',
   },
