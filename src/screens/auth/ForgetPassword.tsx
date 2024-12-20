@@ -5,18 +5,22 @@ import {
   TextInput,
   StyleSheet,
   TouchableOpacity,
+  StatusBar,
+  Dimensions,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {goBack, navigate} from '../../navigation/TopLevelNavigation';
+import { goBack, navigate } from '../../navigation/TopLevelNavigation';
+
+const { width, height } = Dimensions.get('window');
 
 const ForgotPasswordScreen = () => {
   return (
     <View style={styles.container}>
-      {/* Header Section */}
+      <StatusBar barStyle={'light-content'} backgroundColor={'#90D6AA'} />
       <View style={styles.signInContainer}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => goBack()}>
-            <Ionicons name="arrow-back" size={24} color="black" />
+            <Ionicons name="arrow-back" size={width * 0.06} color="black" />
           </TouchableOpacity>
           <Text
             style={styles.register}
@@ -32,7 +36,6 @@ const ForgotPasswordScreen = () => {
         </Text>
       </View>
 
-      {/* Input Section */}
       <View style={styles.welcomeContainer}>
         <View style={styles.inputContainer}>
           <TextInput
@@ -42,19 +45,16 @@ const ForgotPasswordScreen = () => {
           />
         </View>
 
-        {/* Reset Password Button */}
         <TouchableOpacity style={styles.signInButton}>
           <Text
             style={styles.buttonText}
             onPress={() => {
-              // Implement the logic for sending a reset link
               navigate('resetPassword');
             }}>
             Reset Password
           </Text>
         </TouchableOpacity>
 
-        {/* Back to Sign In */}
         <Text
           style={styles.backToSignIn}
           onPress={() => {
@@ -79,58 +79,60 @@ const styles = StyleSheet.create({
     backgroundColor: '#90D6AA',
   },
   signInContainer: {
-    paddingHorizontal: 25,
-    paddingTop: 18,
-    paddingBottom: 14,
+    paddingHorizontal: width * 0.06,
+    paddingTop: height * 0.03,
+    paddingBottom: height * 0.02,
   },
   welcomeContainer: {
     flex: 1,
     backgroundColor: '#fff',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    padding: 25,
+    paddingHorizontal: width * 0.06,
+    paddingTop: height * 0.03,
   },
   forgotPasswordTitle: {
     fontSize: 34,
     fontWeight: '700',
     color: '#000',
-    marginBottom: 10,
-    marginTop: 32,
+    marginBottom: height * 0.01,
+    marginTop: height * 0.04,
   },
   forgotPasswordDescription: {
-    fontSize: 14,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
-    lineHeight: 22,
-    marginBottom: 29,
+    lineHeight: height * 0.03,
+    marginBottom: height * 0.03,
   },
   inputContainer: {
-    marginTop: 30,
+    marginTop: height * 0.03,
   },
   inputField: {
     backgroundColor: '#F5F5F5',
-    padding: 15,
+    paddingVertical: height * 0.02,
+    paddingHorizontal: width * 0.04,
     borderRadius: 25,
-    marginBottom: 15,
-    fontSize: 16,
+    marginBottom: height * 0.02,
+    fontSize: width * 0.045,
   },
   signInButton: {
     backgroundColor: '#000',
-    padding: 15,
+    paddingVertical: height * 0.02,
     borderRadius: 30,
     alignItems: 'center',
-    marginTop: 40,
+    marginTop: height * 0.04,
     elevation: 3,
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: width * 0.045,
     fontWeight: 'bold',
     color: '#ffffff',
   },
   backToSignIn: {
-    fontSize: 14,
+    fontSize: width * 0.04,
     color: '#333',
     textAlign: 'center',
-    marginTop: 40,
+    marginTop: height * 0.04,
     textDecorationLine: 'underline',
     fontWeight: 'bold',
   },
@@ -140,17 +142,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   register: {
-    fontSize: 16,
+    fontSize: width * 0.045,
     fontWeight: '600',
     color: '#000',
   },
   footer: {
-    marginTop: 180,
+    marginTop: height * 0.15,
     alignItems: 'center',
   },
   footerText: {
     color: 'black',
     textAlign: 'center',
+    fontSize: width * 0.035,
   },
 });
 

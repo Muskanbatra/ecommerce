@@ -10,11 +10,14 @@ import {
   StyleSheet,
   StatusBar,
   SafeAreaView,
+  Dimensions
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import SearchInput from '../../component/SearchInput';
 import products from '../../data/FashionShop.json';
 import {navigate} from '../../navigation/TopLevelNavigation';
+
+const { width, height } = Dimensions.get('window');
 
 const FashionShop = () => {
   const renderStars = (rating: any) => {
@@ -49,7 +52,7 @@ const FashionShop = () => {
           <TouchableOpacity>
             <FontAwesome6
               name="arrow-left"
-              size={28}
+              size={width * 0.07}
               color="white"
               onPress={() => {
                 navigate('fashion');
@@ -62,7 +65,7 @@ const FashionShop = () => {
           <FontAwesome name="bell-o" size={24} color="white" />
           <Ionicons
             name="cart-outline"
-            size={24}
+            size={width * 0.07}
             color="white"
             style={{marginLeft: 15}}
           />
@@ -126,14 +129,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
-    paddingTop: 16,
-    paddingBottom: 5,
+    paddingTop: width * 0.05,
+    paddingBottom:width * 0.01,
     backgroundColor: '#90D6AA',
     alignItems: 'center',
   },
   headerTitle: {
     color: 'white',
-    fontSize: 18,
+    fontSize: width * 0.05,
     fontWeight: 'bold',
     marginLeft: 10,
   },
